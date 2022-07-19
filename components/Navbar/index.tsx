@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import { navbarItems } from "../../Constants/NavbarItems";
 
 
 const NavBar = () => {
@@ -14,14 +16,16 @@ const NavBar = () => {
             Pages
         </div>
       </div>
-      <div className="flex p-5">
+      {navbarItems.map((item,i) => (
+      <div className="flex m-5 mt-2 cursor-pointer" key={i}>
         <div>
-      
+        <Image src={item.image} alt="logo" width={20} height={20}/>
         </div>
-        <div>
-            Dashboard
+        <div className="mx-3 text-sm text-gray-100">
+            {item.title}
         </div>
       </div>
+      ))}
     </div>
   );
 };
