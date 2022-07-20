@@ -9,3 +9,7 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.smooth {
+  transition: all 0.7s;
+}
