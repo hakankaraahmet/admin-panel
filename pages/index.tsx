@@ -1,17 +1,19 @@
-import React from 'react'
+import React from "react";
 //components
-import NavBar from '../components/Navbar'
+import SideBar from "../components/SideBar";
+import TopBar from "../components/TopBar";
 
 const index = () => {
   return (
-    <div className='flex'>
-        <NavBar/>
-
-      <div className="">
-        MainContent Area
+    <div className="flex">
+      <SideBar />
+      <div className="flex-1">
+        <div>
+        <TopBar />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

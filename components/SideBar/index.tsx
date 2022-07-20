@@ -5,7 +5,7 @@ import { navbarItems } from "../../Constants/NavbarItems";
 
 const NavBar = () => {
   return (
-    <div className="w-1/3 bg-indigo-900">
+    <div className="w-64 h-screen bg-indigo-900">
       <div className="bg-indigo-800">
         <div className="p-5 text-xl font-bold tracking-wide text-gray-200 uppercase">
           Super Corp
