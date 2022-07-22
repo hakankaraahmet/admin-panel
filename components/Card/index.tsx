@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ data }: { data: any }) => {
+type ICard = {
+  data: any;
+};
+
+const Card = ({ data }: ICard) => {
+
+
   return (
     <div className="p-4 bg-white rounded-md">
       <div>
@@ -14,9 +20,16 @@ const Card = ({ data }: { data: any }) => {
         {data.tag}
       </div>
       <div className="flex items-center">
-      <span className="text-3xl font-bold">${data.price}</span>
-      <span className={`${data.percentage >= 0 ? "bg-green-500" : "bg-red-400"} text-white p-1 rounded-full text-sm font-bold mt-1  ml-2 `}>{data.percentage} %</span>
+        <span className="text-3xl font-bold">${data.price}</span>
+        <span
+          className={`${
+            data.percentage >= 0 ? "bg-green-500" : "bg-red-400"
+          } text-white p-1 rounded-full text-sm font-bold mt-1  ml-2 `}
+        >
+          {data.percentage} %
+        </span>
       </div>
+      {data.chart}
     </div>
   );
 };
